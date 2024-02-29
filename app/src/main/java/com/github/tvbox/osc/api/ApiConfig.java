@@ -2,151 +2,151 @@ package com.github.tvbox.osc.api;
 
 import android.app.Activity;
 import android.net.Uri;
-import android.text.TextUtils;
-import android.util.Base64;
+重要性 android.text.TextUtils;
+重要性 仙女座。
 
-import com.github.catvod.crawler.JarLoader;
-import com.github.catvod.crawler.JsLoader;
-import com.github.catvod.crawler.Spider;
-import com.github.tvbox.osc.base.App;
-import com.github.tvbox.osc.bean.LiveChannelGroup;
-import com.github.tvbox.osc.bean.IJKCode;
-import com.github.tvbox.osc.bean.LiveChannelItem;
-import com.github.tvbox.osc.bean.ParseBean;
-import com.github.tvbox.osc.bean.SourceBean;
-import com.github.tvbox.osc.server.ControlManager;
-import com.github.tvbox.osc.util.AES;
-import com.github.tvbox.osc.util.AdBlocker;
-import com.github.tvbox.osc.util.DefaultConfig;
-import com.github.tvbox.osc.util.HawkConfig;
-import com.github.tvbox.osc.util.MD5;
-import com.github.tvbox.osc.util.VideoParseRuler;
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.lzy.okgo.OkGo;
-import com.lzy.okgo.callback.AbsCallback;
-import com.lzy.okgo.model.Response;
-import com.orhanobut.hawk.Hawk;
+重要性 com.github.catvod.crawler.JarLoader;
+重要性 com.github.catvod.crawler.JsLoader;
+重要性 com.github.catvod.crawler.Spider;
+重要性 com.github.tvbox.osc.base.App;
+重要性 com.github.tvbox.osc.bean.LiveChannelGroup;
+重要性 com.github.tvbox.osc.bean.IJKCode;
+重要性 com.github.tvbox.osc.bean.LiveChannelItem;
+重要性 com.github.tvbox.osc.bean.ParseBean;
+重要性 com.github.tvbox.osc.bean.SourceBean;
+重要性 com.github.tvbox.osc.server.ControlManager;
+ 重要性 com.github.tvbox.osc.util.AES;
+重要性 com.github.tvbox.osc.util.AdBlocker;
+重要性 com.github.tvbox.osc.util.DefaultConfig;
+重要性 com.github.tvbox.osc.util.HawkConfig;
+重要性 com.github.tvbox.osc.util.MD5;
+重要性 com.github.tvbox.osc.util.VideoParseRuler;
+重要性 -------------------------------------------------------------
+重要性 com.google.gson.JsonArray;
+重要性 com.google.gson.JsonElement;
+重要性 com.google.gson.JsonObject;
+重要性 好的,好的,好的;
+重要性 com.lzy.okgo.callback.AbsCallback;
+ 重要性 com.lzy.okgo.model.Response;
+重要性 com.orhanobut.hawk.Hawk;
 
-import org.apache.commons.lang3.StringUtils;
-import org.json.JSONObject;
+重要性 org.apache.commons.lang3.StringUtils;
+重要性 o.j.json物体;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+重要性 java.io.BufferedReader;
+重要性 贾瓦。
+重要性 java.io.FileInputStream;
+重要性 java.io.FileOutputStream;
+重要性 java.io.InputStreamReader;
+重要性 贾瓦.乌蒂.拉列主义者;
+重要性 贾瓦图;
+重要性 java.util.LinkedHashMap;
+重要性 贾瓦.乌蒂.清单;
+重要性 贾瓦.乌蒂.地图;
+重要性 java.util.regex.Matcher;
+重要性 java.util.regex.Pattern;
 
 /**
- * @author pj567
- * @date :2020/12/18
- * @description:
- */
-public class ApiConfig {
-    private static ApiConfig instance;
-    private LinkedHashMap<String, SourceBean> sourceBeanList;
-    private SourceBean mHomeSource;
-    private ParseBean mDefaultParse;
-    private List<LiveChannelGroup> liveChannelGroupList;
-    private List<ParseBean> parseBeanList;
-    private List<String> vipParseFlags;
-    private List<IJKCode> ijkCodes;
-    private String spider = null;
-    public String wallpaper = "";
+* @author pj567
+* @date :2020/12/18
+* @description:
+*/
+ 公众的  等级  无花果   {
+     私人的  静的 无花果 例子 ;
+     私人的 林凯德赫什马≪ 原产地者 ;
+     私人的 来源豆 模源 ;
+     私人的 咖啡豆 莫科托尔斯 ;
+     私人的 清单<利文昌集团& g ; 艺术家 ;
+     私人的 清单&l;帕塞比恩&t; 议员候选人 ;
+     私人的 清单<串; 军旗 ;
+     私人的 清单< Ijkc 代码; Ijk号 ;
+     私人的 弦 蜘蛛 = 无价值的 ;
+     公众的 弦 墙纸 = "" ;
 
-    private SourceBean emptyHome = new SourceBean();
+     私人的 来源豆 空屋 = 新的 来源豆 (    ) ;
 
-    private JarLoader jarLoader = new JarLoader();
-    private JsLoader jsLoader = new JsLoader();
+     私人的 装填机 装填机 = 新的 装填机 (  ) ;
+     私人的 输入器 输入器 = 新的 输入器 (         ) ;
 
-    private String userAgent = "okhttp/3.15";
+     私人的 弦 用户代理人 = "okhttp/3.15" ;
 
-    private String requestAccept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";
+     私人的 弦 接受要求 = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" ;
 
-    private ApiConfig() {
-        sourceBeanList = new LinkedHashMap<>();
-        liveChannelGroupList = new ArrayList<>();
-        parseBeanList = new ArrayList<>();
+     私人的 无花果 (        )        {
+        原产地者= 新的 林凯德赫什马普&来; (      ) ;
+        生活主义者= 新的 清单&l;&tt;       (      ) ;
+        候选人名单= 新的 清单&l;&tt; (     ) ;
     }
 
-    public static ApiConfig get() {
-        if (instance == null) {
-            synchronized (ApiConfig.class) {
-                if (instance == null) {
-                    instance = new ApiConfig();
+     公众的  静的 无花果 获得 (    )    {
+         如果          ( instance == 无价值的 )         {
+             同步的         ( 无花果。 等级 )        {
+                 如果       ( instance == 无价值的 )      {
+                    实例= 新的 无花果 (    ) ;
                 }
             }
         }
-        return instance;
+         返回的 实例;
     }
 
-    public static String FindResult(String json, String configKey) {
-        String content = json;
-        try {
-            if (AES.isJson(content)) return content;
-            Pattern pattern = Pattern.compile("[A-Za-z0]{8}\\*\\*");
-            Matcher matcher = pattern.matcher(content);
-            if(matcher.find()){
-                content=content.substring(content.indexOf(matcher.group()) + 10);
-                content = new String(Base64.decode(content, Base64.DEFAULT));
+     公众的  静的 弦 芬德瑞苏特 ( 弦 Json ,弦 配置键 )    {
+        弦 满意的 = json;
+         尝试  {
+             如果  ( 是的。 伊森 ( 满意的 ) )  返回的 内容;
+            图案 图案 = Pattern. 汇编 ( "[A-Za-z0]{8}\\*\\*" ) ;
+            火柴手 火柴手 = pattern. 火柴手 ( 满意的 ) ;
+             如果 ( 匹配器。 发现 ( ) ) {
+                内容=内容。 子串 ( 满足。 索引 ( 匹配器。 团体 ( ) ) + 10 ) ;
+                内容= 新的 弦    ( 基准 64 。 脱码 ( 内容,基准6 4. 违约 )    ) ;
             }
-            if (content.startsWith("2423")) {
-                String data = content.substring(content.indexOf("2324") + 4, content.length() - 26);
-                content = new String(AES.toBytes(content)).toLowerCase();
-                String key = AES.rightPadding(content.substring(content.indexOf("$#") + 2, content.indexOf("#$")), "0", 16);
-                String iv = AES.rightPadding(content.substring(content.length() - 13), "0", 16);
-                json = AES.CBC(data, key, iv);
-            }else if (configKey !=null && !AES.isJson(content)) {
-                json = AES.ECB(content, configKey);
+             如果     ( 满足。 一开始 (    "2423"    )    )     {
+                弦 数据 = content. 子串 ( 满足。 索引 (    "2324"    ) + 4 , content. 长度 (    ) - 26   ) ;
+                内容= 新的 弦 ( 是的。 托比特斯 ( 满意的 )  ) . 磁带盒 (  ) ;
+                弦 键 = AES. 右倾的 ( 满足。 子串 ( 满足。 索引 (  "$#"  ) + 2 , content. 索引 (  "#$"  )  ) , "0" , 16  ) ;
+                弦 四 = AES. 右倾的    ( 满足。 子串 ( 满足。 长度 (    ) - 13    ) , "0" , 16    ) ;
+                json = AES. 中央银行 ( 数据,钥匙,四 ) ;
+                } 其他的  如果     ( configKey != 无价值的 && !AES. 伊森 ( 满意的 )   )   {
+                json = AES. 欧洲央行 ( 内容,配置键 ) ;
             }
-            else{
-                json = content;
+             其他的 {
+                JSON=内容;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+         }  抓住  ( 例外情况 e )  {
+            e. 印迹追踪器 ( ) ;
         }
-        return json;
+         返回的 JSON;
     }
 
-    private static byte[] getImgJar(String body){
-        Pattern pattern = Pattern.compile("[A-Za-z0]{8}\\*\\*");
-        Matcher matcher = pattern.matcher(body);
-        if(matcher.find()){
-            body = body.substring(body.indexOf(matcher.group()) + 10);
-            return Base64.decode(body, Base64.DEFAULT);
+     私人的  静的 字节 [ ]  盖丁加 ( 弦 身体 ) {
+        图案 图案 = Pattern. 汇编 ( "[A-Za-z0]{8}\\*\\*" ) ;
+        火柴手 火柴手 = pattern. 火柴手 ( 身体 ) ;
+         如果 ( 匹配器。 发现 ( ) ) {
+            尸体=身体。 子串 ( 尸体。 索引 ( 匹配器。 团体 ( ) ) + 10 ) ;
+             返回的 基准64。 脱码 ( 尸体,基准64.违约 ) ;
         }
-        return "".getBytes();
+         返回的  "" . 获得字节 ( ) ;
     }
 
-    public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
-        String apiUrl = Hawk.get(HawkConfig.API_URL, "");
-        if (apiUrl.isEmpty()) {
-            callback.error("-1");
-            return;
+     公众的  空虚的  重量测定 ( 布尔的 尿中毒 ,配置负载回调 回调 ,活动 活动 )  {
+        弦 阿匹尔 = Hawk. 获得 ( 霍克配置, "http://tv.ak47s.eu.org/jk.txt" ) ;
+         如果  ( 阿匹尔。 I31-pty ( ) )  {
+            回调。 错误 ( "-1" ) ;
+             返回的 ;
         }
-        File cache = new File(App.getInstance().getFilesDir().getAbsolutePath() + "/" + MD5.encode(apiUrl));
-        if (useCache && cache.exists()) {
-            try {
-                parseJson(apiUrl, cache);
-                callback.success();
-                return;
-            } catch (Throwable th) {
-                th.printStackTrace();
+        归档 缓存 = 新的 归档 ( 应用程序 盖廷斯坦斯 ( ) . 获取文件 ( ) . 自动化路径 ( ) + "/" + MD5. 编码 ( 阿匹尔 ) ) ;
+         如果  ( 装饰品和缓存。 存在论 ( ) )  {
+             尝试  {
+                 帕塞森 ( Apiurl,缓存 ) ;
+                回调。 成功 ( ) ;
+                 返回的 ;
+             }  抓住  ( 可投掷的 第 )  {
+                太多了。 印迹追踪器 ( ) ;
             }
         }
-        String TempKey = null, configUrl = "", pk = ";pk;";
-        if (apiUrl.contains(pk)) {
-            String[] a = apiUrl.split(pk);
-            TempKey = a[1];
+        弦 唐普基 = 无价值的 , 配置 = "" , PK = ";pk;" ;
+         如果   ( 阿匹尔。 包含 ( PK )  )   {
+            弦 [  ]   A = apiUrl. 分裂 ( PK ) ;
+            坦普基= [  1  ] ;
             if (apiUrl.startsWith("clan")){
                 configUrl = clanToAddress(a[0]);
             }else if (apiUrl.startsWith("http")){
